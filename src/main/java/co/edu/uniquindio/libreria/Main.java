@@ -8,8 +8,16 @@ public class Main {
         Factura factura = new Factura(libro1,2,0.1,36000);
         FacturaImpresion facturaImpresion = new FacturaImpresion(factura);
         facturaImpresion.imprimirFactura();
-        Envio envio = new Envio();
-        envio.mostrarDatosEnvio();
+
+
+        ProcesadorPago Pago1= new ProcesadorPago(new PagoEfectivo());
+        Pago1.ProcesarPago(10000);
+
+        ProcesadorPago Pago2 = new ProcesadorPago(new PagoTarjeta());
+        Pago2.ProcesarPago(20000);
+
+
+
 
 
     }
