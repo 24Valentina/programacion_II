@@ -1,16 +1,20 @@
 package co.edu.uniquindio.libreria;
 
 public class EnvioFisico extends Envio {
-    private String direccion;
-    private String celular;
 
-    private String nombreDestinatario;
-    private String nombreLibro;
-    public String mostrarDatosEnvio() {
-        return "datos del envio:" +"\n"+
-                "direccion del destinatario:"+direccion + "\n"+
-                "celular:"+celular + "\n"+
-                "nombre del libro" + nombreLibro +"\n"+
-                "nombre del destinatario" + nombreDestinatario;
-    }
+   public String direccion;
+   public String celular;
+
+   public EnvioFisico(String nombreLibro, int cantidad, String nombreDestinatario, String direccion, String celular) {
+      super(nombreLibro, cantidad, nombreDestinatario);
+      this.direccion = direccion;
+      this.celular = celular;
+   }
+
+   @Override
+   public void MostrarDatosEnvio(){
+      System.out.println("Los datos del envio fisico son: "+ "\n" +"Nombre Destinatario: "  + getNombreDestinatario() + "\n" +
+              "Direccion: "   +   direccion);
+   }
+
 }
