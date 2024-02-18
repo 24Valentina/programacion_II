@@ -7,7 +7,6 @@ public class FacturaImpresion {
         this.factura = factura;
     }
     public void imprimirFactura(){
-      int  precioCantidad = factura.libro.getPrecio() * factura.cantidad;
 
         System.out.println(factura.cantidad + " libros de: " + factura.libro.getNombre() + " = " + "$ " + factura.cantidad *factura.libro.getPrecio()+"\n"+
                 " tiene un descuento del: " + factura.descuento + " total: " + factura.total  );

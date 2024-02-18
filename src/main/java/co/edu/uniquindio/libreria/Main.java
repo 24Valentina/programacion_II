@@ -5,9 +5,10 @@ package co.edu.uniquindio.libreria;
 public class Main {
     public static void main(String[] args) {
 
-        //imprimirFactura();
-        //procesarPago();
-        mostrarDatosEnvio("fisico");
+        imprimirFactura();
+        procesarPago();
+        mostrarDatosEnvio("virtual");
+       facturarCompra();
 
 
 
@@ -58,7 +59,18 @@ public class Main {
 
 
    }
-    }
+   private static void facturarCompra(){
+
+       FacturaPagoEfectivo factura1 = new FacturaPagoEfectivo(1,10000);
+       factura1.PrepararCambio();
+       factura1.GenerarFactura();
+
+       FacturaPagoTarjeta factura2 = new FacturaPagoTarjeta(2, 15000);
+       factura2.GenerarFactura();
+       factura2.GenerarVoucher();
+
+   }
+}
 
 
 

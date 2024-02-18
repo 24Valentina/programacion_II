@@ -14,9 +14,4 @@ public class Factura {
         this.total = total;
     }
 
-    public double calculaTotal() {
-       double precio = ((libro.getPrecio()- libro.getPrecio()* descuento)*this.cantidad);
-        return precio;
-    }
-
 }
