@@ -1,6 +1,5 @@
 package co.edu.uniquindio.libreria;
 
-import co.edu.uniquindio.libreria.IPrepararCambio;
 
 public class FacturaPagoEfectivo extends Facturar implements IPrepararCambio {
     public Facturar Factura;

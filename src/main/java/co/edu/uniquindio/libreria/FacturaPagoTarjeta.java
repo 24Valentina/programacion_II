@@ -1,8 +1,5 @@
 package co.edu.uniquindio.libreria;
 
-import co.edu.uniquindio.libreria.IGenerarVoucher;
-
-;
 
 public class FacturaPagoTarjeta extends Facturar implements IGenerarVoucher {
     public FacturaPagoTarjeta(int numero, double total) {
